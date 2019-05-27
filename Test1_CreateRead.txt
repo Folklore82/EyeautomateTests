@@ -1,0 +1,17 @@
+//Testet lägger till en handväska i kundvagnen och kontrollerar att den finns där
+//Förutsättningar - kundkorgen ska vara tom. Shopizer körs lokalt.
+
+StartWeb "http://localhost:8080/shop"
+
+//Lägger en fördröjning mellan varje steg för att testet inte ska fastna.
+StepDelay "2000"
+Click "{ImageFolder}/1558716570718.png" 13 52
+MouseScroll "6"
+Click "{ImageFolder}/1558716670892.png" 50 76
+MouseScroll "-6"
+Click "{ImageFolder}/1558716801125.png" 13 38
+Click "{ImageFolder}/1558717287105.png"
+MouseScroll "2"
+//Kontrollerar att innehållet i kundkorgen stämmer
+Check "{ImageFolder}/1558716989773.png" 93 14 1181 77
+
